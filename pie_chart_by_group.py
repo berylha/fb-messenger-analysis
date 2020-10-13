@@ -24,9 +24,11 @@ plt.rcParams['axes.prop_cycle'] = cycler('color', ['#2364aa', '#3da5d6',
 # IMPORTANT: make sure you have extracted the folder into the same location as
 # this file, or change the directory so it points to the correct location.
 dir = 'messages/inbox/'
+if len(chatlist) == 0:
+    chatlist = os.listdir(dir)
 
 # Iterate through chats
-for chatfolder in os.listdir(dir):
+for chatfolder in chatlist:
     chatname = chatfolder.split('_')[0]
     all_files = os.listdir(dir + chatfolder)
     # Ensure that this chat has text-based messages
@@ -52,7 +54,7 @@ for chatfolder in os.listdir(dir):
     df = df.sort_values(by=['N'], ignore_index=True)
 
     # Now plot the pie chart
-    print('Plotting' + chatname)
+    print('Plotting ' + chatname)
     tot = np.sum(df.N)
     # Participant name only listed if sent >1% of messages
     # (otherwise plot is too cluttered)
