@@ -10,7 +10,7 @@ Download your data from Facebook by going to
 
     facebook.com > Settings > Your Facebook Information > Download Your Information
 
-Deselect everything other than "Messages" and select "Format: JSON", the click "Create File"
+Deselect everything other than "Messages", select "Format: JSON", then click "Create File".
 
 After the download is ready (this might take a while), download it and extract the zip folder into the same directory where this program is located.
 
@@ -24,7 +24,7 @@ There are some settings you can optionally set in the files, such as which chats
 
 Analyzes all direct messages (chats with only 1 member other than you) sent over time.
 Generates 3 plots:
- - `lineplot_nolegend.png`: A line plot showing all messages sent with each person over time.
+ - `lineplot_nolegend.png` A line plot showing all messages sent with each person over time.
  - `lineplot_top_n.png` A labeled line plot showing all messages sent with the n most-messaged people over time, where n defaults to 10 but can be changed.
  - `pie_chart.png` A pie chart showing percent of messages sent to each person.
 

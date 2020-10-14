@@ -103,7 +103,7 @@ if line_plot_all_no_legend:
         ax.plot(tt, list(row))
     ax.set_ylabel('Messages per week')
     ax.set_xticks(tt[::interval])
-    ax.set_xticklabels([t.strip(':0') for t in tt[::interval]], rotation=45)
+    ax.set_xticklabels([t.strip(':0') for t in tt[::interval]], rotation=60)
     fig.tight_layout()
     plt.savefig('lineplot_nolegend.png')
     plt.close()
@@ -118,9 +118,9 @@ if line_plot_top_n:
     ax.set_ylabel('Messages per week')
     ax.legend(loc='upper left')
     ax.set_xticks(tt[::interval])
-    ax.set_xticklabels([t.strip(':0') for t in tt[::interval]], rotation=30)
+    ax.set_xticklabels([t.strip(':0') for t in tt[::interval]], rotation=60)
     fig.tight_layout()
-    plt.savefig('lineplot_top_10.png')
+    plt.savefig('lineplot_top_n.png')
     plt.close()
 
 # PIE CHART
