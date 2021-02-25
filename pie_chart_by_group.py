@@ -27,6 +27,9 @@ dir = 'messages/inbox/'
 if len(chatlist) == 0:
     chatlist = os.listdir(dir)
 
+# Make directory in which to save plots
+os.mkdir('plots_group')
+
 # Iterate through chats
 for chatfolder in chatlist:
     chatname = chatfolder.split('_')[0]
